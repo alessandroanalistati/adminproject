@@ -1,0 +1,33 @@
+{% extends "aulapratica/base.html" %}
+{% load meus_filtros %}
+
+{% block title %}
+
+Listagem de Aulas Práticas
+
+{% endblock title %}
+
+
+{% block content %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Sala</th>
+            <th>Data de Solicitação</th>
+            <th>Turno</th>
+        </tr>
+    </thead>
+    <tbody>
+      {% for i in listaraulapraticas %}
+        <tr>
+            <td>{{i.apsala}}</td>
+            <td>{{i.data_solicitacao | date:"d M Y"}} </td>
+            <td>{{i.turno}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+ <a href=""><button class="btn btn-primary">Cadastrar</button></a>
+
+{% endblock content %}

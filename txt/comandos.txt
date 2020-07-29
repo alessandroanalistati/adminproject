@@ -1,0 +1,44 @@
+pip install virtualenv
+virtualenv envadminproject
+envadminproject\Scripts\activate
+
+django-admin startproject adminproject
+python manage.py startapp app
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+
+source envadminproject/bin/activate
+
+python manage.py runserver
+
+pip freeze > riquirements.txt
+
+
+
+
+
+
+
+
+python manage.py runserver
+
+
+
+envzarek\Scripts\activate
+
+
+pip install chatterbot_corpus
+pip install chatterbot
+pip install selenium
+
+
+chromedriver 83.0.4103.39 essa versão funcionol
+
+
+
+
+
+
+
+

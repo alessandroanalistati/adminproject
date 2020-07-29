@@ -1,0 +1,48 @@
+ssh 35.247.209.136
+ssh-keygen
+cat /c/Users/aless/.ssh/id_rsa.pub
+
+source ./envadminproject/bin/activate
+
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py createsuperuser
+python3 manage.py runserver
+
+
+
+
+
+
+
+sudo docker start mariadb
+
+cd adminproject
+sudo rm -fr adminproject
+git clone https://github.com/alessandroanalistati/ifbaianonlab.git
+sudo cp -R adminproject/ /home/aless/adminproject/
+sudo rm /home/aless/adminproject/adminproject/app/migrations/0001_initial.py
+sudo cp settings.py /home/aless/adminproject/adminproject/adminproject/
+
+sudo cp -R media/ /home/aless/adminproject/adminproject/
+sudo cp -R static/ /home/aless/adminproject/adminproject/
+
+
+
+
+mudar ip
+sudo nano /home/aless/adminproject/adminproject/adminproject/settings.py
+
+sudo supervisorctl restart adminproject 
+sudo supervisorctl reread
+sudo supervisorctl update
+sudo supervisorctl status 
+sudo rm -fr /etc/nginx/sites-enabled/default && sudo systemctl restart nginx
+
+
+sudo supervisorctl restart adminproject   - quando travar   -  2 opcao sudo service supervisor start adminproject
+
+
+cpoiar a pasta static do antigo
+
+

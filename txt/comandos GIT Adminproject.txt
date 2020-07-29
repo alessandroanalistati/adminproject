@@ -1,0 +1,21 @@
+cho "# nlab" >> README.md
+git init
+git remote add origin https://github.com/alessandroanalistati/adminproject.git
+git checkout -b "Completo_upload_22-07-2020"         -b para criar caso não tenha
+git add .
+git commit -m "Completo_upload_22-07-2020"
+git branch
+git push -u origin Completo_upload_22-07-2020
+
+
+git checkout  master   
+git merge Completo_upload_22-07-2020   - atualizar para a master
+git push origin master
+
+
+
+
+
+
+
+

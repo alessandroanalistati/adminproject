@@ -1,0 +1,117 @@
+{% extends "aulapratica/base.html" %}
+{% load meus_filtros %}
+{% block title %}
+
+Cadastro de Aulas Práticas
+
+{% endblock title %}
+
+
+    {% block content %}
+
+<main class="container">
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.nome.errors }}
+        <label>Sala: </label>
+            {{ form.apsala|addclass:'form-control' }}
+        </div>
+
+        {% csrf_token %}
+            <div class="form-group">
+                {{ form.nome.errors }}
+        <label>Data de Solicitação: </label>
+            {{ form.data_solicitacao|addclass:'form-control' }}
+        </div>
+
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.nome.errors }}
+        <label>Turno: </label>
+            {{ form.turno|addclass:'form-control' }}
+        </div>
+
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.nome.errors }}
+        <label>Data Inicio: </label>
+            {{ form.data_H_inicio|addclass:'form-control' }}
+        </div>
+
+        {% csrf_token %}
+         <div class="form-group">
+             {{ form.nome.errors }}
+        <label>Data Final: </label>
+            {{ form.data_H_final|addclass:'form-control' }}
+        </div>
+
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.nome.errors }}
+        <label>Quantidade de Alunos: </label>
+            {{ form.quant_aluno|addclass:'form-control' }}
+        </div>
+
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.nome.errors }}
+        <label>Observações sobre Local: </label>
+            {{ form.obs1|addclass:'form-control' }}
+        </div>
+
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.nome.errors }}
+            <label><h1>Selecionar Aula Pronta como Modelo:</h1> </label>
+            {{ form.aulasprontas|addclass:'form-control' }}
+        </div>
+
+        <div class="form-group">
+            {{ form.nome.errors }}
+            <label><h2>Solicitar Materiais Individuais </h2> </label>
+        </div>
+
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.nome.errors }}
+        <label>Reagente: </label>
+            {{ form.reagente|addclass:'form-control' }}
+        </div>
+
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.nome.errors }}
+        <label>Diverços: </label>
+            {{ form.diverso|addclass:'form-control' }}
+        </div>
+
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.nome.errors }}
+        <label>Equipamento: </label>
+            {{ form.equipamento|addclass:'form-control' }}
+        </div>
+
+        <div class="form-group">
+            {{ form.nome.errors }}
+        <label>Vidraria: </label>
+            {{ form.vidraria|addclass:'form-control' }}
+        </div>
+
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.nome.errors }}
+        <label>Observações sobre Materiais Necessários: </label>
+            {{ form.obs2|addclass:'form-control' }}
+        </div>
+
+        <div>
+            <input type="submit" name="Cadastrar">
+        </div>
+
+    </form>
+
+
+    {% endblock content %}
